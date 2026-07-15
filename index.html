@@ -200,26 +200,36 @@
 </head>
 
 <body>
+
   <main class="container">
     <section class="card">
 
       <header class="header">
+
         <img
           src="LogoBper_Orizzontale.jpeg"
           class="logo"
           alt="FIRST CISL BPER Banca">
 
         <h1>Resoconto Proselitismo FIRST CISL BPER Banca</h1>
+
       </header>
 
-      <form id="reportForm">
+      <form
+        id="reportForm"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxt-d78qxrop-E-q4UcmLRxCt-mhgcCu6Aed30Vf0x8cs_15UPTMZ3BDqHSjVGPKh_69w/exec"
+        target="invioNascosto">
 
         <p class="nota-obbligatori">
           I campi contrassegnati con * sono obbligatori.
         </p>
 
         <div class="field">
-          <label for="nomeCognome">NOME E COGNOME *</label>
+
+          <label for="nomeCognome">
+            NOME E COGNOME *
+          </label>
 
           <input
             type="text"
@@ -228,19 +238,25 @@
             autocomplete="name"
             maxlength="120"
             required>
+
         </div>
 
         <div class="field">
-          <label for="dataVisita">DATA VISITA *</label>
+
+          <label for="dataVisita">
+            DATA VISITA *
+          </label>
 
           <input
             type="date"
             id="dataVisita"
             name="dataVisita"
             required>
+
         </div>
 
         <div class="field">
+
           <label for="numeroFiliali">
             NUMERO FILIALI VISITATE (da 1 a 6) *
           </label>
@@ -257,53 +273,103 @@
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
+
           </select>
+
         </div>
 
-        <div id="filialiContainer" aria-live="polite"></div>
+        <div
+          id="filialiContainer"
+          aria-live="polite">
+        </div>
+
+        <input
+          type="hidden"
+          id="payload"
+          name="payload">
 
         <div class="button-wrap">
-          <button type="submit" id="submitButton">
+
+          <button
+            type="submit"
+            id="submitButton">
+
             INVIA
+
           </button>
+
         </div>
 
-        <p id="status" role="status" aria-live="polite"></p>
+        <p
+          id="status"
+          role="status"
+          aria-live="polite">
+        </p>
 
       </form>
+
+      <iframe
+        name="invioNascosto"
+        id="invioNascosto"
+        style="display: none;">
+      </iframe>
+
     </section>
   </main>
 
   <script>
-    const WEB_APP_URL =
-      'https://script.google.com/macros/s/AKfycbxt-d78qxrop-E-q4UcmLRxCt-mhgcCu6Aed30Vf0x8cs_15UPTMZ3BDqHSjVGPKh_69w/exec';
+    const form =
+      document.getElementById('reportForm');
 
-    const form = document.getElementById('reportForm');
-    const numeroFiliali = document.getElementById('numeroFiliali');
-    const filialiContainer = document.getElementById('filialiContainer');
-    const submitButton = document.getElementById('submitButton');
-    const statusBox = document.getElementById('status');
+    const numeroFiliali =
+      document.getElementById('numeroFiliali');
 
-    numeroFiliali.addEventListener('change', creaCampiFiliali);
+    const filialiContainer =
+      document.getElementById('filialiContainer');
+
+    const submitButton =
+      document.getElementById('submitButton');
+
+    const statusBox =
+      document.getElementById('status');
+
+    const payloadInput =
+      document.getElementById('payload');
+
+    const iframeInvio =
+      document.getElementById('invioNascosto');
+
+    let invioInCorso = false;
+
+    numeroFiliali.addEventListener(
+      'change',
+      creaCampiFiliali
+    );
 
     function creaCampiFiliali() {
-      const totaleFiliali = Number(numeroFiliali.value);
+
+      const totale =
+        Number(numeroFiliali.value);
 
       filialiContainer.innerHTML = '';
 
-      if (!totaleFiliali) {
+      if (!totale) {
         return;
       }
 
-      for (let i = 1; i <= totaleFiliali; i++) {
-        const sezione = document.createElement('section');
+      for (let i = 1; i <= totale; i++) {
 
-        sezione.className = 'filiale-card';
+        const sezione =
+          document.createElement('section');
+
+        sezione.className =
+          'filiale-card';
 
         sezione.innerHTML = `
           <h2>FILIALE ${i}</h2>
 
           <div class="field">
+
             <label for="nomeFiliale${i}">
               NOME FILIALE *
             </label>
@@ -311,21 +377,24 @@
             <input
               type="text"
               id="nomeFiliale${i}"
-              name="nomeFiliale${i}"
               maxlength="150"
               required>
+
           </div>
 
-          <div class="field" style="margin-bottom: 0;">
+          <div
+            class="field"
+            style="margin-bottom: 0;">
+
             <label for="noteFiliale${i}">
               NOTE
             </label>
 
             <textarea
               id="noteFiliale${i}"
-              name="noteFiliale${i}"
               maxlength="1500"
               placeholder="Inserisci eventuali note..."></textarea>
+
           </div>
         `;
 
@@ -333,93 +402,105 @@
       }
     }
 
-    form.addEventListener('submit', async function (event) {
-      event.preventDefault();
+    form.addEventListener(
+      'submit',
+      function (event) {
 
-      resetMessaggio();
+        event.preventDefault();
 
-      if (!form.reportValidity()) {
-        return;
+        statusBox.textContent = '';
+        statusBox.className = '';
+
+        if (!form.reportValidity()) {
+          return;
+        }
+
+        const totale =
+          Number(numeroFiliali.value);
+
+        const filiali = [];
+
+        for (let i = 1; i <= totale; i++) {
+
+          const nomeFiliale =
+            document
+              .getElementById('nomeFiliale' + i)
+              .value
+              .trim();
+
+          const note =
+            document
+              .getElementById('noteFiliale' + i)
+              .value
+              .trim();
+
+          filiali.push({
+            nomeFiliale: nomeFiliale,
+            note: note
+          });
+        }
+
+        const dati = {
+
+          nomeCognome:
+            document
+              .getElementById('nomeCognome')
+              .value
+              .trim(),
+
+          dataVisita:
+            document
+              .getElementById('dataVisita')
+              .value,
+
+          numeroFiliali:
+            totale,
+
+          filiali:
+            filiali
+        };
+
+        payloadInput.value =
+          JSON.stringify(dati);
+
+        invioInCorso = true;
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+          'INVIO IN CORSO...';
+
+        form.submit();
       }
+    );
 
-      const totaleFiliali = Number(numeroFiliali.value);
-      const filiali = [];
+    iframeInvio.addEventListener(
+      'load',
+      function () {
 
-      for (let i = 1; i <= totaleFiliali; i++) {
-        const nomeFiliale =
-          document.getElementById(`nomeFiliale${i}`).value.trim();
+        if (!invioInCorso) {
+          return;
+        }
 
-        const note =
-          document.getElementById(`noteFiliale${i}`).value.trim();
+        invioInCorso = false;
 
-        filiali.push({
-          nomeFiliale: nomeFiliale,
-          note: note
-        });
-      }
+        statusBox.textContent =
+          'Grazie! Il resoconto è stato registrato.';
 
-      const payload = {
-        nomeCognome:
-          document.getElementById('nomeCognome').value.trim(),
-
-        dataVisita:
-          document.getElementById('dataVisita').value,
-
-        numeroFiliali:
-          totaleFiliali,
-
-        filiali:
-          filiali
-      };
-
-      submitButton.disabled = true;
-      submitButton.textContent = 'INVIO IN CORSO...';
-
-      try {
-        await fetch(WEB_APP_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain;charset=utf-8'
-          },
-          body: JSON.stringify(payload)
-        });
-
-        mostraMessaggio(
-          'Grazie! Il resoconto è stato inviato.',
-          true
-        );
+        statusBox.className =
+          'status-successo';
 
         form.reset();
+
         filialiContainer.innerHTML = '';
 
-      } catch (errore) {
-        console.error('Errore durante l’invio:', errore);
-
-        mostraMessaggio(
-          'Non è stato possibile inviare i dati. Controlla la connessione e riprova.',
-          false
-        );
-
-      } finally {
         submitButton.disabled = false;
-        submitButton.textContent = 'INVIA';
+
+        submitButton.textContent =
+          'INVIA';
       }
-    });
-
-    function mostraMessaggio(testo, successo) {
-      statusBox.textContent = testo;
-
-      statusBox.className =
-        successo
-          ? 'status-successo'
-          : 'status-errore';
-    }
-
-    function resetMessaggio() {
-      statusBox.textContent = '';
-      statusBox.className = '';
-    }
+    );
   </script>
+
 </body>
 </html>
