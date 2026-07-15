@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Resoconto Proselitismo FIRST CISL BPER Banca</title>
+
+  <style>
+    :root {
+      --blu-first: #00528c;
+      --verde-first: #007a4d;
+      --sfondo: #f2f6f8;
+      --bordo: #c8d5dc;
+      --testo: #17212b;
+      --successo: #067647;
+      --errore: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 12px;
+      background: var(--sfondo);
+      color: var(--testo);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .card {
+      overflow: hidden;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 26px rgba(0, 45, 75, 0.12);
+    }
+
+    .header {
+      padding: 24px;
+      text-align: center;
+      border-bottom: 5px solid var(--verde-first);
+    }
+
+    .logo {
+      display: block;
+      width: min(100%, 430px);
+      height: auto;
+      margin: 0 auto 18px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--blu-first);
+      font-size: clamp(22px, 4vw, 31px);
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    form {
+      padding: 26px 24px 30px;
+    }
+
+    .nota-obbligatori {
+      margin: -4px 0 22px;
+      color: #52606d;
+      font-size: 13px;
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blu-first);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--bordo);
+      border-radius: 9px;
+      background: #ffffff;
+      color: var(--testo);
+      font: inherit;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input,
+    select {
+      min-height: 48px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blu-first);
+      box-shadow: 0 0 0 3px rgba(0, 82, 140, 0.14);
+    }
+
+    .filiale-card {
+      margin-bottom: 20px;
+      padding: 18px;
+      border: 1px solid var(--bordo);
+      border-left: 6px solid var(--verde-first);
+      border-radius: 11px;
+      background: #f9fbfc;
+    }
+
+    .filiale-card h2 {
+      margin: 0 0 16px;
+      color: var(--verde-first);
+      font-size: 18px;
+    }
+
+    .button-wrap {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      max-width: 320px;
+      min-height: 52px;
+      border: 0;
+      border-radius: 28px;
+      background: var(--blu-first);
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+
+    #status {
+      min-height: 24px;
+      margin: 18px 0 0;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .status-successo {
+      color: var(--successo);
+    }
+
+    .status-errore {
+      color: var(--errore);
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 0;
+      }
+
+      .card {
+        min-height: 100vh;
+        border-radius: 0;
+      }
+
+      .header,
+      form {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .filiale-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+
+      <header class="header">
+        <img
+          src="LogoBper_Orizzontale.jpeg"
+          class="logo"
+          alt="FIRST CISL BPER Banca">
+
+        <h1>Resoconto Proselitismo FIRST CISL BPER Banca</h1>
+      </header>
+
+      <form id="reportForm">
+
+        <p class="nota-obbligatori">
+          I campi contrassegnati con * sono obbligatori.
+        </p>
+
+        <div class="field">
+          <label for="nomeCognome">NOME E COGNOME *</label>
+
+          <input
+            type="text"
+            id="nomeCognome"
+            name="nomeCognome"
+            autocomplete="name"
+            maxlength="120"
+            required>
+        </div>
+
+        <div class="field">
+          <label for="dataVisita">DATA VISITA *</label>
+
+          <input
+            type="date"
+            id="dataVisita"
+            name="dataVisita"
+            required>
+        </div>
+
+        <div class="field">
+          <label for="numeroFiliali">
+            NUMERO FILIALI VISITATE (da 1 a 6) *
+          </label>
+
+          <select
+            id="numeroFiliali"
+            name="numeroFiliali"
+            required>
+
+            <option value="">Seleziona...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div id="filialiContainer" aria-live="polite"></div>
+
+        <div class="button-wrap">
+          <button type="submit" id="submitButton">
+            INVIA
+          </button>
+        </div>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const WEB_APP_URL =
+      'https://script.google.com/macros/s/AKfycbxt-d78qxrop-E-q4UcmLRxCt-mhgcCu6Aed30Vf0x8cs_15UPTMZ3BDqHSjVGPKh_69w/exec';
+
+    const form = document.getElementById('reportForm');
+    const numeroFiliali = document.getElementById('numeroFiliali');
+    const filialiContainer = document.getElementById('filialiContainer');
+    const submitButton = document.getElementById('submitButton');
+    const statusBox = document.getElementById('status');
+
+    numeroFiliali.addEventListener('change', creaCampiFiliali);
+
+    function creaCampiFiliali() {
+      const totaleFiliali = Number(numeroFiliali.value);
+
+      filialiContainer.innerHTML = '';
+
+      if (!totaleFiliali) {
+        return;
+      }
+
+      for (let i = 1; i <= totaleFiliali; i++) {
+        const sezione = document.createElement('section');
+
+        sezione.className = 'filiale-card';
+
+        sezione.innerHTML = `
+          <h2>FILIALE ${i}</h2>
+
+          <div class="field">
+            <label for="nomeFiliale${i}">
+              NOME FILIALE *
+            </label>
+
+            <input
+              type="text"
+              id="nomeFiliale${i}"
+              name="nomeFiliale${i}"
+              maxlength="150"
+              required>
+          </div>
+
+          <div class="field" style="margin-bottom: 0;">
+            <label for="noteFiliale${i}">
+              NOTE
+            </label>
+
+            <textarea
+              id="noteFiliale${i}"
+              name="noteFiliale${i}"
+              maxlength="1500"
+              placeholder="Inserisci eventuali note..."></textarea>
+          </div>
+        `;
+
+        filialiContainer.appendChild(sezione);
+      }
+    }
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      resetMessaggio();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const totaleFiliali = Number(numeroFiliali.value);
+      const filiali = [];
+
+      for (let i = 1; i <= totaleFiliali; i++) {
+        const nomeFiliale =
+          document.getElementById(`nomeFiliale${i}`).value.trim();
+
+        const note =
+          document.getElementById(`noteFiliale${i}`).value.trim();
+
+        filiali.push({
+          nomeFiliale: nomeFiliale,
+          note: note
+        });
+      }
+
+      const payload = {
+        nomeCognome:
+          document.getElementById('nomeCognome').value.trim(),
+
+        dataVisita:
+          document.getElementById('dataVisita').value,
+
+        numeroFiliali:
+          totaleFiliali,
+
+        filiali:
+          filiali
+      };
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'INVIO IN CORSO...';
+
+      try {
+        await fetch(WEB_APP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        mostraMessaggio(
+          'Grazie! Il resoconto è stato inviato.',
+          true
+        );
+
+        form.reset();
+        filialiContainer.innerHTML = '';
+
+      } catch (errore) {
+        console.error('Errore durante l’invio:', errore);
+
+        mostraMessaggio(
+          'Non è stato possibile inviare i dati. Controlla la connessione e riprova.',
+          false
+        );
+
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'INVIA';
+      }
+    });
+
+    function mostraMessaggio(testo, successo) {
+      statusBox.textContent = testo;
+
+      statusBox.className =
+        successo
+          ? 'status-successo'
+          : 'status-errore';
+    }
+
+    function resetMessaggio() {
+      statusBox.textContent = '';
+      statusBox.className = '';
+    }
+  </script>
+</body>
+</html>
