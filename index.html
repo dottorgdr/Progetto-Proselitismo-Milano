@@ -47,10 +47,7 @@
           #eaf3f0 100%
         );
       color: var(--testo);
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .page-container {
@@ -64,8 +61,7 @@
       background: var(--bianco);
       border: 1px solid rgba(0, 84, 140, 0.12);
       border-radius: 22px;
-      box-shadow:
-        0 18px 50px rgba(0, 53, 88, 0.14);
+      box-shadow: 0 18px 50px rgba(0, 53, 88, 0.14);
     }
 
     .hero {
@@ -117,8 +113,7 @@
       padding: 12px 20px;
       background: var(--bianco);
       border-radius: 14px;
-      box-shadow:
-        0 8px 22px rgba(0, 32, 55, 0.2);
+      box-shadow: 0 8px 22px rgba(0, 32, 55, 0.2);
     }
 
     .logo {
@@ -238,7 +233,6 @@
       color: var(--blu-scuro);
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.15px;
     }
 
     .required {
@@ -291,25 +285,13 @@
       resize: vertical;
     }
 
-    input:hover,
-    select:hover,
-    textarea:hover {
-      background: var(--bianco);
-      border-color: #aebfc9;
-    }
-
     input:focus,
     select:focus,
     textarea:focus {
       outline: none;
       background: var(--bianco);
       border-color: var(--blu-first);
-      box-shadow:
-        0 0 0 4px rgba(0, 84, 140, 0.12);
-    }
-
-    select {
-      cursor: pointer;
+      box-shadow: 0 0 0 4px rgba(0, 84, 140, 0.12);
     }
 
     .filiali-title {
@@ -333,8 +315,7 @@
       background: var(--bianco);
       border: 1px solid var(--bordo);
       border-radius: 15px;
-      box-shadow:
-        0 6px 20px rgba(0, 55, 88, 0.07);
+      box-shadow: 0 6px 20px rgba(0, 55, 88, 0.07);
     }
 
     .filiale-header {
@@ -367,7 +348,6 @@
     .filiale-header h2 {
       margin: 0;
       font-size: 17px;
-      letter-spacing: 0.2px;
     }
 
     .filiale-content {
@@ -380,12 +360,10 @@
     }
 
     button {
-      position: relative;
       width: 100%;
       max-width: 390px;
       min-height: 56px;
       padding: 13px 25px;
-      overflow: hidden;
       border: 0;
       border-radius: 30px;
       background:
@@ -397,36 +375,18 @@
       color: var(--bianco);
       font-size: 17px;
       font-weight: 700;
-      letter-spacing: 0.3px;
       cursor: pointer;
-      box-shadow:
-        0 8px 20px rgba(0, 84, 140, 0.25);
-      transition:
-        transform 0.18s,
-        box-shadow 0.18s,
-        opacity 0.18s;
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 12px 25px rgba(0, 84, 140, 0.3);
-    }
-
-    button:active {
-      transform: translateY(0);
+      box-shadow: 0 8px 20px rgba(0, 84, 140, 0.25);
     }
 
     button:disabled {
       opacity: 0.65;
       cursor: wait;
-      transform: none;
     }
 
     #status {
       min-height: 26px;
       margin: 20px 0 0;
-      padding: 0;
       text-align: center;
       font-size: 15px;
       font-weight: 700;
@@ -434,7 +394,7 @@
     }
 
     .status-successo {
-      padding: 14px 16px !important;
+      padding: 14px 16px;
       color: var(--successo);
       background: var(--verde-chiaro);
       border: 1px solid #b8dfcf;
@@ -442,7 +402,7 @@
     }
 
     .status-errore {
-      padding: 14px 16px !important;
+      padding: 14px 16px;
       color: var(--errore);
       background: #fff0ef;
       border: 1px solid #f1c4bf;
@@ -469,10 +429,6 @@
         background: var(--bianco);
       }
 
-      .page-container {
-        max-width: none;
-      }
-
       .main-card {
         min-height: 100vh;
         border: 0;
@@ -482,10 +438,6 @@
 
       .hero {
         padding: 27px 18px 29px;
-      }
-
-      .logo-box {
-        padding: 10px 15px;
       }
 
       .form-area {
@@ -499,10 +451,6 @@
 
       .field-full {
         grid-column: auto;
-      }
-
-      .filiale-content {
-        padding: 19px 16px 2px;
       }
 
       button {
@@ -557,9 +505,9 @@
           </div>
 
           <p>
-            Inserisci i dati della visita. Dopo aver selezionato
-            il numero delle filiali, compariranno automaticamente
-            i campi dedicati a ciascuna sede.
+            Seleziona il dirigente sindacale e il numero di filiali
+            visitate. Nei campi successivi compariranno esclusivamente
+            le filiali assegnate al dirigente scelto.
           </p>
 
         </div>
@@ -582,66 +530,66 @@
 
           <div class="general-fields">
 
-        <div class="field field-full">
+            <div class="field field-full">
 
-  <label for="nomeCognome">
-    Nome e cognome
-    <span class="required">*</span>
-  </label>
+              <label for="nomeCognome">
+                Dirigente sindacale
+                <span class="required">*</span>
+              </label>
 
-  <div class="input-wrapper">
+              <div class="input-wrapper">
 
-    <span class="input-icon">
-      👤
-    </span>
+                <span class="input-icon">
+                  👤
+                </span>
 
-    <select
-  id="nomeCognome"
-  name="nomeCognome"
-  class="with-icon"
-  required>
+                <select
+                  id="nomeCognome"
+                  name="nomeCognome"
+                  class="with-icon"
+                  required>
 
-  <option value="">
-    Seleziona nome e cognome
-  </option>
+                  <option value="">
+                    Seleziona nome e cognome
+                  </option>
 
-  <option value="Caldani Diego">
-    Caldani Diego
-  </option>
+                  <option value="Caldani Diego">
+                    Caldani Diego
+                  </option>
 
-  <option value="Cremonesi Emilio">
-    Cremonesi Emilio
-  </option>
+                  <option value="Cremonesi Emilio">
+                    Cremonesi Emilio
+                  </option>
 
-  <option value="Montemaggi Alessandro">
-    Montemaggi Alessandro
-  </option>
+                  <option value="Montemaggi Alessandro">
+                    Montemaggi Alessandro
+                  </option>
 
-  <option value="Ottaviani Daniele">
-    Ottaviani Daniele
-  </option>
+                  <option value="Ottaviani Daniele">
+                    Ottaviani Daniele
+                  </option>
 
-  <option value="Rossi Gabriele">
-    Rossi Gabriele
-  </option>
+                  <option value="Rossi Gabriele">
+                    Rossi Gabriele
+                  </option>
 
-  <option value="Salvoni Luca">
-    Salvoni Luca
-  </option>
+                  <option value="Salvoni Luca">
+                    Salvoni Luca
+                  </option>
 
-  <option value="Spigno G. Pietro">
-    Spigno G. Pietro
-  </option>
+                  <option value="Spigno G.Pietro">
+                    Spigno G.Pietro
+                  </option>
 
-  <option value="Torriani Ivano">
-    Torriani Ivano
-  </option>
+                  <option value="Torriani Ivano">
+                    Torriani Ivano
+                  </option>
 
-</select>
+                </select>
 
-  </div>
+              </div>
 
-</div>
+            </div>
 
             <div class="field">
 
@@ -719,8 +667,8 @@
             id="filialiPlaceholder"
             class="filiali-placeholder">
 
-            Seleziona il numero delle filiali visitate
-            per visualizzare i campi da compilare.
+            Seleziona il dirigente sindacale e il numero delle filiali
+            visitate per visualizzare i campi da compilare.
 
           </div>
 
@@ -781,8 +729,117 @@
   </main>
 
   <script>
+    const FILIALI_PER_DIRIGENTE = {
+      "Caldani Diego": [
+        "Caldani Diego Filiale 1",
+        "Caldani Diego Filiale 2",
+        "Caldani Diego Filiale 3",
+        "Caldani Diego Filiale 4",
+        "Caldani Diego Filiale 5",
+        "Caldani Diego Filiale 6",
+        "Caldani Diego Filiale 7",
+        "Caldani Diego Filiale 8",
+        "Caldani Diego Filiale 9",
+        "Caldani Diego Filiale 10"
+      ],
+
+      "Cremonesi Emilio": [
+        "Cremonesi Emilio Filiale 1",
+        "Cremonesi Emilio Filiale 2",
+        "Cremonesi Emilio Filiale 3",
+        "Cremonesi Emilio Filiale 4",
+        "Cremonesi Emilio Filiale 5",
+        "Cremonesi Emilio Filiale 6",
+        "Cremonesi Emilio Filiale 7",
+        "Cremonesi Emilio Filiale 8",
+        "Cremonesi Emilio Filiale 9",
+        "Cremonesi Emilio Filiale 10"
+      ],
+
+      "Montemaggi Alessandro": [
+        "Montemaggi Alessandro Filiale 1",
+        "Montemaggi Alessandro Filiale 2",
+        "Montemaggi Alessandro Filiale 3",
+        "Montemaggi Alessandro Filiale 4",
+        "Montemaggi Alessandro Filiale 5",
+        "Montemaggi Alessandro Filiale 6",
+        "Montemaggi Alessandro Filiale 7",
+        "Montemaggi Alessandro Filiale 8",
+        "Montemaggi Alessandro Filiale 9",
+        "Montemaggi Alessandro Filiale 10"
+      ],
+
+      "Ottaviani Daniele": [
+        "Ottaviani Daniele Filiale 1",
+        "Ottaviani Daniele Filiale 2",
+        "Ottaviani Daniele Filiale 3",
+        "Ottaviani Daniele Filiale 4",
+        "Ottaviani Daniele Filiale 5",
+        "Ottaviani Daniele Filiale 6",
+        "Ottaviani Daniele Filiale 7",
+        "Ottaviani Daniele Filiale 8",
+        "Ottaviani Daniele Filiale 9",
+        "Ottaviani Daniele Filiale 10"
+      ],
+
+      "Rossi Gabriele": [
+        "Rossi Gabriele Filiale 1",
+        "Rossi Gabriele Filiale 2",
+        "Rossi Gabriele Filiale 3",
+        "Rossi Gabriele Filiale 4",
+        "Rossi Gabriele Filiale 5",
+        "Rossi Gabriele Filiale 6",
+        "Rossi Gabriele Filiale 7",
+        "Rossi Gabriele Filiale 8",
+        "Rossi Gabriele Filiale 9",
+        "Rossi Gabriele Filiale 10"
+      ],
+
+      "Salvoni Luca": [
+        "Luca Salvoni Filiale 1",
+        "Luca Salvoni Filiale 2",
+        "Luca Salvoni Filiale 3",
+        "Luca Salvoni Filiale 4",
+        "Luca Salvoni Filiale 5",
+        "Luca Salvoni Filiale 6",
+        "Luca Salvoni Filiale 7",
+        "Luca Salvoni Filiale 8",
+        "Luca Salvoni Filiale 9",
+        "Luca Salvoni Filiale 10"
+      ],
+
+      "Spigno G.Pietro": [
+        "Spigno G.Pietro Filiale 1",
+        "Spigno G.Pietro Filiale 2",
+        "Spigno G.Pietro Filiale 3",
+        "Spigno G.Pietro Filiale 4",
+        "Spigno G.Pietro Filiale 5",
+        "Spigno G.Pietro Filiale 6",
+        "Spigno G.Pietro Filiale 7",
+        "Spigno G.Pietro Filiale 8",
+        "Spigno G.Pietro Filiale 9",
+        "Spigno G.Pietro Filiale 10"
+      ],
+
+      "Torriani Ivano": [
+        "Torriani Ivano Filiale 1",
+        "Torriani Ivano Filiale 2",
+        "Torriani Ivano Filiale 3",
+        "Torriani Ivano Filiale 4",
+        "Torriani Ivano Filiale 5",
+        "Torriani Ivano Filiale 6",
+        "Torriani Ivano Filiale 7",
+        "Torriani Ivano Filiale 8",
+        "Torriani Ivano Filiale 9",
+        "Torriani Ivano Filiale 10"
+      ]
+    };
+
     const form =
       document.getElementById('reportForm');
+
+    const nomeCognome =
+      document.getElementById('nomeCognome');
 
     const numeroFiliali =
       document.getElementById('numeroFiliali');
@@ -812,38 +869,66 @@
       creaCampiFiliali
     );
 
-    function creaCampiFiliali() {
+    nomeCognome.addEventListener(
+      'change',
+      creaCampiFiliali
+    );
 
+    function creaCampiFiliali() {
       const totale =
         Number(numeroFiliali.value);
+
+      const dirigenteSelezionato =
+        nomeCognome.value;
 
       filialiContainer.innerHTML = '';
 
       statusBox.textContent = '';
       statusBox.className = '';
 
-      if (!totale) {
-
+      if (!dirigenteSelezionato) {
         filialiPlaceholder.style.display =
           'block';
+
+        filialiPlaceholder.textContent =
+          'Seleziona prima il dirigente sindacale.';
 
         return;
       }
 
+      if (!totale) {
+        filialiPlaceholder.style.display =
+          'block';
+
+        filialiPlaceholder.textContent =
+          'Seleziona il numero delle filiali visitate.';
+
+        return;
+      }
+
+      const elencoFiliali =
+        FILIALI_PER_DIRIGENTE[dirigenteSelezionato] || [];
+
       filialiPlaceholder.style.display =
         'none';
 
-      for (
-        let i = 1;
-        i <= totale;
-        i++
-      ) {
-
+      for (let i = 1; i <= totale; i++) {
         const sezione =
           document.createElement('section');
 
         sezione.className =
           'filiale-card';
+
+        let opzioniFiliali = '';
+
+        elencoFiliali.forEach(function (filiale) {
+          opzioniFiliali +=
+            '<option value="' +
+            filiale +
+            '">' +
+            filiale +
+            '</option>';
+        });
 
         sezione.innerHTML = `
           <div class="filiale-header">
@@ -867,12 +952,18 @@
                 <span class="required">*</span>
               </label>
 
-              <input
-                type="text"
+              <select
                 id="nomeFiliale${i}"
-                maxlength="150"
-                placeholder="Inserisci il nome della filiale"
+                name="nomeFiliale${i}"
                 required>
+
+                <option value="">
+                  Seleziona la filiale
+                </option>
+
+                ${opzioniFiliali}
+
+              </select>
 
             </div>
 
@@ -884,6 +975,7 @@
 
               <textarea
                 id="noteFiliale${i}"
+                name="noteFiliale${i}"
                 maxlength="1500"
                 placeholder="Inserisci eventuali osservazioni, richieste o informazioni utili"></textarea>
 
@@ -901,7 +993,6 @@
     form.addEventListener(
       'submit',
       function (event) {
-
         event.preventDefault();
 
         statusBox.textContent = '';
@@ -916,12 +1007,7 @@
 
         const filiali = [];
 
-        for (
-          let i = 1;
-          i <= totale;
-          i++
-        ) {
-
+        for (let i = 1; i <= totale; i++) {
           const nomeFiliale =
             document
               .getElementById(
@@ -945,14 +1031,8 @@
         }
 
         const dati = {
-
           nomeCognome:
-            document
-              .getElementById(
-                'nomeCognome'
-              )
-              .value
-              .trim(),
+            nomeCognome.value.trim(),
 
           dataVisita:
             document
@@ -985,7 +1065,6 @@
     iframeInvio.addEventListener(
       'load',
       function () {
-
         if (!invioInCorso) {
           return;
         }
@@ -1005,15 +1084,13 @@
         filialiPlaceholder.style.display =
           'block';
 
+        filialiPlaceholder.textContent =
+          'Seleziona il dirigente sindacale e il numero delle filiali visitate per visualizzare i campi da compilare.';
+
         submitButton.disabled = false;
 
         submitButton.textContent =
           'INVIA RESOCONTO';
-
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        });
       }
     );
   </script>
