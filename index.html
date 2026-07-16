@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
 
@@ -16,14 +17,19 @@
       --blu-first: #00548c;
       --blu-scuro: #003d68;
       --blu-chiaro: #eaf3f8;
+
       --verde-first: #008257;
       --verde-scuro: #006643;
       --verde-chiaro: #e9f6f1;
+
       --sfondo: #edf2f5;
       --bianco: #ffffff;
+
       --testo: #24313a;
       --testo-secondario: #60717d;
+
       --bordo: #d4dfe5;
+
       --successo: #087443;
       --errore: #b42318;
     }
@@ -39,6 +45,7 @@
     body {
       margin: 0;
       padding: 30px 14px;
+
       background:
         linear-gradient(
           145deg,
@@ -46,8 +53,13 @@
           #f7f9fa 50%,
           #eaf3f0 100%
         );
+
       color: var(--testo);
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
     }
 
     .page-container {
@@ -58,18 +70,32 @@
 
     .main-card {
       overflow: hidden;
+
       background: var(--bianco);
-      border: 1px solid rgba(0, 84, 140, 0.12);
+
+      border:
+        1px solid
+        rgba(0, 84, 140, 0.12);
+
       border-radius: 22px;
-      box-shadow: 0 18px 50px rgba(0, 53, 88, 0.14);
+
+      box-shadow:
+        0 18px 50px
+        rgba(0, 53, 88, 0.14);
     }
 
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 32px 26px 34px;
+
+      padding:
+        32px
+        26px
+        34px;
+
       text-align: center;
       color: var(--bianco);
+
       background:
         linear-gradient(
           135deg,
@@ -81,24 +107,34 @@
 
     .hero::before {
       content: "";
+
       position: absolute;
       top: -120px;
       right: -90px;
+
       width: 270px;
       height: 270px;
+
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
+
+      background:
+        rgba(255, 255, 255, 0.08);
     }
 
     .hero::after {
       content: "";
+
       position: absolute;
       bottom: -150px;
       left: -100px;
+
       width: 300px;
       height: 300px;
+
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
+
+      background:
+        rgba(255, 255, 255, 0.06);
     }
 
     .hero-content {
@@ -108,16 +144,27 @@
 
     .logo-box {
       display: inline-block;
+
       max-width: 100%;
+
       margin-bottom: 23px;
-      padding: 12px 20px;
+
+      padding:
+        12px
+        20px;
+
       background: var(--bianco);
+
       border-radius: 14px;
-      box-shadow: 0 8px 22px rgba(0, 32, 55, 0.2);
+
+      box-shadow:
+        0 8px 22px
+        rgba(0, 32, 55, 0.2);
     }
 
     .logo {
       display: block;
+
       width: 300px;
       max-width: 100%;
       height: auto;
@@ -125,93 +172,153 @@
 
     .eyebrow {
       display: block;
+
       margin-bottom: 9px;
+
       font-size: 13px;
       font-weight: 700;
+
       letter-spacing: 1.2px;
       text-transform: uppercase;
+
       opacity: 0.9;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(28px, 5vw, 39px);
+
+      font-size:
+        clamp(
+          28px,
+          5vw,
+          39px
+        );
+
       line-height: 1.14;
+
       letter-spacing: -0.4px;
+
       text-transform: uppercase;
     }
 
     .hero-description {
       max-width: 590px;
-      margin: 15px auto 0;
+
+      margin:
+        15px
+        auto
+        0;
+
       font-size: 16px;
       line-height: 1.55;
+
       opacity: 0.95;
     }
 
     .form-area {
-      padding: 30px 30px 35px;
+      padding:
+        30px
+        30px
+        35px;
     }
 
     .intro-box {
       display: flex;
+
       gap: 14px;
+
       align-items: flex-start;
+
       margin-bottom: 27px;
-      padding: 17px 18px;
+
+      padding:
+        17px
+        18px;
+
       background: var(--blu-chiaro);
-      border-left: 5px solid var(--blu-first);
+
+      border-left:
+        5px solid
+        var(--blu-first);
+
       border-radius: 12px;
     }
 
     .intro-icon {
       flex: 0 0 auto;
+
+      display: flex;
+
       width: 34px;
       height: 34px;
-      display: flex;
+
       align-items: center;
       justify-content: center;
+
       border-radius: 50%;
+
       background: var(--blu-first);
       color: var(--bianco);
+
       font-size: 17px;
       font-weight: bold;
     }
 
     .intro-box p {
       margin: 0;
+
       color: #365261;
+
       font-size: 14px;
       line-height: 1.55;
     }
 
     .section-title {
       display: flex;
+
       align-items: center;
+
       gap: 10px;
-      margin: 0 0 19px;
+
+      margin:
+        0
+        0
+        19px;
+
       color: var(--blu-scuro);
+
       font-size: 18px;
       font-weight: 700;
     }
 
     .section-number {
+      display: inline-flex;
+
       width: 29px;
       height: 29px;
-      display: inline-flex;
+
+      flex: 0 0 auto;
+
       align-items: center;
       justify-content: center;
-      flex: 0 0 auto;
+
       border-radius: 50%;
+
       background: var(--blu-first);
       color: var(--bianco);
+
       font-size: 14px;
     }
 
     .general-fields {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
       gap: 19px;
+
       margin-bottom: 29px;
     }
 
@@ -224,13 +331,18 @@
     }
 
     .field-full {
-      grid-column: 1 / -1;
+      grid-column:
+        1 / -1;
     }
 
-    label {
+    label,
+    .radio-group-title {
       display: block;
+
       margin-bottom: 8px;
+
       color: var(--blu-scuro);
+
       font-size: 14px;
       font-weight: 700;
     }
@@ -245,23 +357,38 @@
 
     .input-icon {
       position: absolute;
+
       top: 50%;
       left: 14px;
-      transform: translateY(-50%);
+
+      transform:
+        translateY(-50%);
+
       pointer-events: none;
+
       color: var(--blu-first);
+
       font-size: 18px;
+
+      z-index: 2;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      border: 1px solid var(--bordo);
+
+      border:
+        1px solid
+        var(--bordo);
+
       border-radius: 11px;
+
       background: #fbfcfd;
       color: var(--testo);
+
       font: inherit;
+
       transition:
         border-color 0.2s,
         box-shadow 0.2s,
@@ -271,7 +398,14 @@
     input,
     select {
       min-height: 52px;
-      padding: 13px 14px;
+
+      padding:
+        13px
+        14px;
+    }
+
+    select {
+      cursor: pointer;
     }
 
     .with-icon {
@@ -280,18 +414,34 @@
 
     textarea {
       min-height: 115px;
+
       padding: 14px;
+
       line-height: 1.5;
+
       resize: vertical;
+    }
+
+    input:hover,
+    select:hover,
+    textarea:hover {
+      background: var(--bianco);
+
+      border-color: #aebfc9;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
       outline: none;
+
       background: var(--bianco);
+
       border-color: var(--blu-first);
-      box-shadow: 0 0 0 4px rgba(0, 84, 140, 0.12);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(0, 84, 140, 0.12);
     }
 
     .filiali-title {
@@ -300,30 +450,56 @@
 
     .filiali-placeholder {
       margin-bottom: 24px;
+
       padding: 20px;
+
       text-align: center;
+
       color: var(--testo-secondario);
+
       background: #f8fafb;
-      border: 1px dashed #bdcbd3;
+
+      border:
+        1px dashed
+        #bdcbd3;
+
       border-radius: 12px;
+
       font-size: 14px;
+      line-height: 1.5;
     }
 
     .filiale-card {
       overflow: hidden;
+
       margin-bottom: 22px;
+
       background: var(--bianco);
-      border: 1px solid var(--bordo);
+
+      border:
+        1px solid
+        var(--bordo);
+
       border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 55, 88, 0.07);
+
+      box-shadow:
+        0 6px 20px
+        rgba(0, 55, 88, 0.07);
     }
 
     .filiale-header {
       display: flex;
+
       align-items: center;
+
       gap: 11px;
-      padding: 15px 19px;
+
+      padding:
+        15px
+        19px;
+
       color: var(--bianco);
+
       background:
         linear-gradient(
           100deg,
@@ -333,88 +509,273 @@
     }
 
     .filiale-badge {
+      display: flex;
+
       width: 31px;
       height: 31px;
-      display: flex;
+
+      flex: 0 0 auto;
+
       align-items: center;
       justify-content: center;
-      flex: 0 0 auto;
+
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.2
+        );
+
       font-size: 14px;
       font-weight: 700;
     }
 
     .filiale-header h2 {
       margin: 0;
+
       font-size: 17px;
     }
 
     .filiale-content {
-      padding: 21px 20px 4px;
+      padding:
+        21px
+        20px
+        4px;
+    }
+
+    .radio-group-title {
+      margin-bottom: 11px;
+    }
+
+    .radio-options {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          1fr
+        );
+
+      gap: 10px;
+    }
+
+    .radio-option {
+      position: relative;
+    }
+
+    .radio-option input[type="radio"] {
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+
+      opacity: 0;
+
+      pointer-events: none;
+    }
+
+    .radio-option label {
+      display: flex;
+
+      min-height: 50px;
+
+      margin: 0;
+
+      padding:
+        11px
+        8px;
+
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid
+        var(--bordo);
+
+      border-radius: 10px;
+
+      background: #fbfcfd;
+      color: var(--testo);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      text-align: center;
+
+      cursor: pointer;
+
+      transition:
+        border-color 0.2s,
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
+    }
+
+    .radio-option label:hover {
+      border-color: var(--blu-first);
+
+      background: var(--blu-chiaro);
+
+      transform:
+        translateY(-1px);
+    }
+
+    .radio-option
+    input[type="radio"]:checked
+    + label {
+      border-color: var(--verde-first);
+
+      background: var(--verde-first);
+      color: var(--bianco);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(0, 130, 87, 0.13);
+    }
+
+    .radio-option
+    input[type="radio"]:focus
+    + label {
+      outline:
+        3px solid
+        rgba(0, 84, 140, 0.2);
+
+      outline-offset: 2px;
     }
 
     .button-wrap {
       margin-top: 31px;
+
       text-align: center;
     }
 
     button {
       width: 100%;
       max-width: 390px;
+
       min-height: 56px;
-      padding: 13px 25px;
+
+      padding:
+        13px
+        25px;
+
       border: 0;
       border-radius: 30px;
+
       background:
         linear-gradient(
           100deg,
           var(--blu-scuro),
           var(--blu-first)
         );
+
       color: var(--bianco);
+
       font-size: 17px;
       font-weight: 700;
+
+      letter-spacing: 0.3px;
+
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0, 84, 140, 0.25);
+
+      box-shadow:
+        0 8px 20px
+        rgba(0, 84, 140, 0.25);
+
+      transition:
+        transform 0.18s,
+        box-shadow 0.18s,
+        opacity 0.18s;
+    }
+
+    button:hover {
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 25px
+        rgba(0, 84, 140, 0.3);
+    }
+
+    button:active {
+      transform:
+        translateY(0);
     }
 
     button:disabled {
       opacity: 0.65;
+
       cursor: wait;
+
+      transform: none;
     }
 
     #status {
       min-height: 26px;
-      margin: 20px 0 0;
+
+      margin:
+        20px
+        0
+        0;
+
       text-align: center;
+
       font-size: 15px;
       font-weight: 700;
+
       line-height: 1.45;
     }
 
     .status-successo {
-      padding: 14px 16px;
+      padding:
+        14px
+        16px;
+
       color: var(--successo);
+
       background: var(--verde-chiaro);
-      border: 1px solid #b8dfcf;
+
+      border:
+        1px solid
+        #b8dfcf;
+
       border-radius: 11px;
     }
 
     .status-errore {
-      padding: 14px 16px;
+      padding:
+        14px
+        16px;
+
       color: var(--errore);
+
       background: #fff0ef;
-      border: 1px solid #f1c4bf;
+
+      border:
+        1px solid
+        #f1c4bf;
+
       border-radius: 11px;
     }
 
     .footer {
-      padding: 19px 22px;
+      padding:
+        19px
+        22px;
+
       text-align: center;
+
       color: #60717d;
       background: #f7f9fa;
-      border-top: 1px solid #e1e8ec;
+
+      border-top:
+        1px solid
+        #e1e8ec;
+
       font-size: 13px;
       line-height: 1.5;
     }
@@ -426,26 +787,46 @@
     @media (max-width: 650px) {
       body {
         padding: 0;
+
         background: var(--bianco);
+      }
+
+      .page-container {
+        max-width: none;
       }
 
       .main-card {
         min-height: 100vh;
+
         border: 0;
         border-radius: 0;
+
         box-shadow: none;
       }
 
       .hero {
-        padding: 27px 18px 29px;
+        padding:
+          27px
+          18px
+          29px;
+      }
+
+      .logo-box {
+        padding:
+          10px
+          15px;
       }
 
       .form-area {
-        padding: 25px 18px 31px;
+        padding:
+          25px
+          18px
+          31px;
       }
 
       .general-fields {
         grid-template-columns: 1fr;
+
         gap: 20px;
       }
 
@@ -453,8 +834,25 @@
         grid-column: auto;
       }
 
+      .filiale-content {
+        padding:
+          19px
+          16px
+          2px;
+      }
+
       button {
         max-width: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .radio-options {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
       }
     }
   </style>
@@ -474,8 +872,8 @@
 
             <img
               class="logo"
-              alt="FIRST CISL BPER Banca"
-              src="data:image/jpeg;base64,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">
+              src="LogoBper_Orizzontale.jpeg"
+              alt="FIRST CISL BPER Banca">
 
           </div>
 
@@ -505,9 +903,9 @@
           </div>
 
           <p>
-            Seleziona il dirigente sindacale e il numero di filiali
-            visitate. Nei campi successivi compariranno esclusivamente
-            le filiali assegnate al dirigente scelto.
+            Seleziona il dirigente sindacale e il numero
+            di filiali visitate. Per ciascuna filiale indica
+            anche la possibilità di proselitismo riscontrata.
           </p>
 
         </div>
@@ -638,12 +1036,29 @@
                     Seleziona da 1 a 6
                   </option>
 
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
+                  <option value="1">
+                    1
+                  </option>
+
+                  <option value="2">
+                    2
+                  </option>
+
+                  <option value="3">
+                    3
+                  </option>
+
+                  <option value="4">
+                    4
+                  </option>
+
+                  <option value="5">
+                    5
+                  </option>
+
+                  <option value="6">
+                    6
+                  </option>
 
                 </select>
 
@@ -667,8 +1082,9 @@
             id="filialiPlaceholder"
             class="filiali-placeholder">
 
-            Seleziona il dirigente sindacale e il numero delle filiali
-            visitate per visualizzare i campi da compilare.
+            Seleziona il dirigente sindacale e il numero
+            delle filiali visitate per visualizzare
+            i campi da compilare.
 
           </div>
 
@@ -730,6 +1146,7 @@
 
   <script>
     const FILIALI_PER_DIRIGENTE = {
+
       "Caldani Diego": [
         "Caldani Diego Filiale 1",
         "Caldani Diego Filiale 2",
@@ -835,58 +1252,89 @@
       ]
     };
 
+
     const form =
-      document.getElementById('reportForm');
+      document.getElementById(
+        'reportForm'
+      );
 
     const nomeCognome =
-      document.getElementById('nomeCognome');
+      document.getElementById(
+        'nomeCognome'
+      );
 
     const numeroFiliali =
-      document.getElementById('numeroFiliali');
+      document.getElementById(
+        'numeroFiliali'
+      );
 
     const filialiContainer =
-      document.getElementById('filialiContainer');
+      document.getElementById(
+        'filialiContainer'
+      );
 
     const filialiPlaceholder =
-      document.getElementById('filialiPlaceholder');
+      document.getElementById(
+        'filialiPlaceholder'
+      );
 
     const submitButton =
-      document.getElementById('submitButton');
+      document.getElementById(
+        'submitButton'
+      );
 
     const statusBox =
-      document.getElementById('status');
+      document.getElementById(
+        'status'
+      );
 
     const payloadInput =
-      document.getElementById('payload');
+      document.getElementById(
+        'payload'
+      );
 
     const iframeInvio =
-      document.getElementById('invioNascosto');
+      document.getElementById(
+        'invioNascosto'
+      );
 
-    let invioInCorso = false;
+    let invioInCorso =
+      false;
+
 
     numeroFiliali.addEventListener(
       'change',
       creaCampiFiliali
     );
 
+
     nomeCognome.addEventListener(
       'change',
       creaCampiFiliali
     );
 
+
     function creaCampiFiliali() {
+
       const totale =
-        Number(numeroFiliali.value);
+        Number(
+          numeroFiliali.value
+        );
 
       const dirigenteSelezionato =
         nomeCognome.value;
 
-      filialiContainer.innerHTML = '';
+      filialiContainer.innerHTML =
+        '';
 
-      statusBox.textContent = '';
-      statusBox.className = '';
+      statusBox.textContent =
+        '';
+
+      statusBox.className =
+        '';
 
       if (!dirigenteSelezionato) {
+
         filialiPlaceholder.style.display =
           'block';
 
@@ -897,6 +1345,7 @@
       }
 
       if (!totale) {
+
         filialiPlaceholder.style.display =
           'block';
 
@@ -907,28 +1356,41 @@
       }
 
       const elencoFiliali =
-        FILIALI_PER_DIRIGENTE[dirigenteSelezionato] || [];
+        FILIALI_PER_DIRIGENTE[
+          dirigenteSelezionato
+        ] || [];
 
       filialiPlaceholder.style.display =
         'none';
 
-      for (let i = 1; i <= totale; i++) {
+      for (
+        let i = 1;
+        i <= totale;
+        i++
+      ) {
+
         const sezione =
-          document.createElement('section');
+          document.createElement(
+            'section'
+          );
 
         sezione.className =
           'filiale-card';
 
-        let opzioniFiliali = '';
+        let opzioniFiliali =
+          '';
 
-        elencoFiliali.forEach(function (filiale) {
-          opzioniFiliali +=
-            '<option value="' +
-            filiale +
-            '">' +
-            filiale +
-            '</option>';
-        });
+        elencoFiliali.forEach(
+          function (filiale) {
+
+            opzioniFiliali +=
+              '<option value="' +
+              escapeHtml(filiale) +
+              '">' +
+              escapeHtml(filiale) +
+              '</option>';
+          }
+        );
 
         sezione.innerHTML = `
           <div class="filiale-header">
@@ -969,6 +1431,81 @@
 
             <div class="field">
 
+              <span class="radio-group-title">
+
+                Possibilità di proselitismo
+                <span class="required">*</span>
+
+              </span>
+
+              <div
+                class="radio-options"
+                role="radiogroup"
+                aria-label="Possibilità di proselitismo filiale ${i}">
+
+                <div class="radio-option">
+
+                  <input
+                    type="radio"
+                    id="proselitismoAlta${i}"
+                    name="proselitismo${i}"
+                    value="Alta"
+                    required>
+
+                  <label for="proselitismoAlta${i}">
+                    Alta
+                  </label>
+
+                </div>
+
+                <div class="radio-option">
+
+                  <input
+                    type="radio"
+                    id="proselitismoMedia${i}"
+                    name="proselitismo${i}"
+                    value="Media">
+
+                  <label for="proselitismoMedia${i}">
+                    Media
+                  </label>
+
+                </div>
+
+                <div class="radio-option">
+
+                  <input
+                    type="radio"
+                    id="proselitismoBassa${i}"
+                    name="proselitismo${i}"
+                    value="Bassa">
+
+                  <label for="proselitismoBassa${i}">
+                    Bassa
+                  </label>
+
+                </div>
+
+                <div class="radio-option">
+
+                  <input
+                    type="radio"
+                    id="proselitismoNulla${i}"
+                    name="proselitismo${i}"
+                    value="Nulla">
+
+                  <label for="proselitismoNulla${i}">
+                    Nulla
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="field">
+
               <label for="noteFiliale${i}">
                 Note
               </label>
@@ -990,24 +1527,37 @@
       }
     }
 
+
     form.addEventListener(
       'submit',
       function (event) {
+
         event.preventDefault();
 
-        statusBox.textContent = '';
-        statusBox.className = '';
+        statusBox.textContent =
+          '';
+
+        statusBox.className =
+          '';
 
         if (!form.reportValidity()) {
           return;
         }
 
         const totale =
-          Number(numeroFiliali.value);
+          Number(
+            numeroFiliali.value
+          );
 
-        const filiali = [];
+        const filiali =
+          [];
 
-        for (let i = 1; i <= totale; i++) {
+        for (
+          let i = 1;
+          i <= totale;
+          i++
+        ) {
+
           const nomeFiliale =
             document
               .getElementById(
@@ -1015,6 +1565,18 @@
               )
               .value
               .trim();
+
+          const proselitismoSelezionato =
+            document.querySelector(
+              'input[name="proselitismo' +
+              i +
+              '"]:checked'
+            );
+
+          const possibilitaProselitismo =
+            proselitismoSelezionato
+              ? proselitismoSelezionato.value
+              : '';
 
           const note =
             document
@@ -1025,14 +1587,24 @@
               .trim();
 
           filiali.push({
-            nomeFiliale: nomeFiliale,
-            note: note
+
+            nomeFiliale:
+              nomeFiliale,
+
+            possibilitaProselitismo:
+              possibilitaProselitismo,
+
+            note:
+              note
           });
         }
 
         const dati = {
+
           nomeCognome:
-            nomeCognome.value.trim(),
+            nomeCognome
+              .value
+              .trim(),
 
           dataVisita:
             document
@@ -1049,11 +1621,15 @@
         };
 
         payloadInput.value =
-          JSON.stringify(dati);
+          JSON.stringify(
+            dati
+          );
 
-        invioInCorso = true;
+        invioInCorso =
+          true;
 
-        submitButton.disabled = true;
+        submitButton.disabled =
+          true;
 
         submitButton.textContent =
           'INVIO IN CORSO...';
@@ -1062,14 +1638,17 @@
       }
     );
 
+
     iframeInvio.addEventListener(
       'load',
       function () {
+
         if (!invioInCorso) {
           return;
         }
 
-        invioInCorso = false;
+        invioInCorso =
+          false;
 
         statusBox.textContent =
           'Grazie! Il resoconto è stato registrato correttamente.';
@@ -1079,7 +1658,8 @@
 
         form.reset();
 
-        filialiContainer.innerHTML = '';
+        filialiContainer.innerHTML =
+          '';
 
         filialiPlaceholder.style.display =
           'block';
@@ -1087,13 +1667,43 @@
         filialiPlaceholder.textContent =
           'Seleziona il dirigente sindacale e il numero delle filiali visitate per visualizzare i campi da compilare.';
 
-        submitButton.disabled = false;
+        submitButton.disabled =
+          false;
 
         submitButton.textContent =
           'INVIA RESOCONTO';
       }
     );
+
+
+    function escapeHtml(testo) {
+
+      return String(
+        testo
+      )
+        .replace(
+          /&/g,
+          '&amp;'
+        )
+        .replace(
+          /</g,
+          '&lt;'
+        )
+        .replace(
+          />/g,
+          '&gt;'
+        )
+        .replace(
+          /"/g,
+          '&quot;'
+        )
+        .replace(
+          /'/g,
+          '&#039;'
+        );
+    }
   </script>
 
 </body>
+
 </html>
